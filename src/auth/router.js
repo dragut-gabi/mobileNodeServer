@@ -23,6 +23,7 @@ const createUser = async (user, response) => {
 router.post('/signup', async (ctx) => await createUser(ctx.request.body, ctx.response));
 
 router.post('/login', async (ctx) => {
+  //console.log('login')
   const credentials = ctx.request.body;
   const response = ctx.response;
   const user = await userStore.findOne({ username: credentials.username });
