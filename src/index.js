@@ -30,7 +30,7 @@ app.use(jwt(jwtConfig))
 
 // protected
 const protectedApiRouter = new Router({ prefix })
-protectedApiRouter.use('/item', bookRouter.routes())
+protectedApiRouter.use('/book', bookRouter.routes())
 app.use(protectedApiRouter.routes()).use(protectedApiRouter.allowedMethods())
 
 server.listen(3000)
